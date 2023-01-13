@@ -5,10 +5,12 @@
 
 .navbar {
     height: 8vh;
+	z-index: 1;	
 }
 
 main {
     background: url("img/fundo.png") no-repeat center center;
+	background-color: #4F4F4F;
     background-size: cover;
     height: 86vh;  
 }
@@ -39,26 +41,9 @@ footer a:hover{
 #pag-orcamento{
     background: url("img/fundo.png") no-repeat center center;
     background-size: cover;
+	background-color: #4F4F4F;
     height: 100%;
-    padding: 30px;
-}
-
-#container{
-	display:flex;
-	margin-top: 20px;
-}
-
-.card{
-	background-color: #fff;
-	margin: 10px;
-	width: 33%;
-	border-radius: 8px;
-	box-shadow: 0px 4px 8px #9E9E9E;
-	transition: 0.5s;	
-}
-
-.card:hover{
-	box-shadow: 0px 8px 16px #9E9E9E;
+    padding: 30px;		
 }
 
 h1{
@@ -80,38 +65,50 @@ h2{
     padding: 40px;
 }
 
-h3{
-	color: red;
+.card-preco{	
+	background-color: #fff;
+	margin: 10px;
+	width: 14%;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px #9E9E9E;
+	transition: 0.5s;		
+}
+
+.card-preco:hover{
+	box-shadow: 0px 8px 16px #9E9E9E;
+}
+
+
+.card-preco img{
+	width: 100%;
+	height: 150px;
+}
+
+.card-preco h4{
 	text-align: center;
-	font-family: 'Kaushan Script', cursive;
-	font-size: 1.7rem;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.card-preco a{
+	text-align: left;
+	padding: 10px;
+	
 }
 
 h4{
 	color: #363636;
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	padding: 4px;
 	font-weight: 700;
 	
 }
 
-.card-content{
-	padding: 10px;
-}
-
-.card-content p{
-	text-align: center;
-	font-size: 1rem;
-	line-height: 20px;
-} 
-
 .card-links{
 	text-decoration: none;
 	color: red;
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	display: flex;
@@ -136,25 +133,30 @@ h4{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	padding: 10px;
-	
-	
+	text-align: center;		
 }
 
+.accordion-button{
+	color: #363636;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+}
+
+.accordion-button:hover{
+	color: #EE0000;
+}
+
+.accordion-button:active{
+	color: #EE0000;
+}
+
+.accordion-body {
+	display: flex;
+	flex-wrap: wrap;		
+}
+
+
 @media screen and (max-width: 500px){
-	#container{
-		flex-direction: column;
-		margin-top: 20px;
-	}
-
-	.card{
-		background-color: #fff;
-		margin: 10px;
-		width: 100%;
-		border-radius: 8px;
-		box-shadow: 0px 4px 8px #9E9E9E;
-		transition: 0.5s;	
-	}
-
 	h1{
 		color: #FFF;
 		text-align: center;
@@ -173,13 +175,39 @@ h4{
 		margin-bottom: 10px;
 		padding: 40px;
 	}
-
-	h3{
-		color: red;
-		text-align: center;
-		font-family: 'Kaushan Script', cursive;
-		font-size: 1.5rem;
-		margin-bottom: 10px;
+	
+	.accordion-button{
+		font-size: 0.8rem;
 	}
 	
+	.accordion-body{
+		display:block;
+	}
+
+	.card-preco{
+		background-color: #fff;
+		margin:auto;
+		width: 70%;
+		border-radius: 8px;
+		box-shadow: 0px 4px 8px #9E9E9E;
+		transition: 0.5s;
+	}
+
+	.card-preco img{
+		width: 100%;
+		height: 170px;
+		padding: auto;
+	}
+	
+	.card-preco h4{
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 0.9rem;
+	}
+	
+	.card-preco a{
+		text-align: left;
+		padding: 10px;
+		font-size: 0.8rem;	
+	}
 }

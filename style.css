@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;300;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap');
 
 *{margin: 0; padding: 0;}
 
 .navbar {    
-	z-index: 1;	
+	z-index: 1;		
 }
 
 main {
@@ -13,11 +12,16 @@ main {
     height: 88vh;  
 }
 
+/*tag criada devido ao position do menu lateral apresentar erros para ficar sticky*/
+#nada{
+	background-color: #1C1C1C;
+}
+
 footer{
 	background-color: #212529;
 	padding: 20px;
     height: 6vh;
-    
+	clear: left;	   
 }
 
 #footer-p{
@@ -116,7 +120,7 @@ h2{
 h4{
 	color: #363636;
 	text-align: center;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 1rem;
 	padding: 4px;
 	font-weight: 700;
@@ -156,20 +160,55 @@ h4{
 
 
 /*decada50*/
-#decada50{	
-	background: #1C1C1C;
-    height: 100%;
-    padding: 30px;	
+.layout-float{}
+
+.menu-lateral{
+	width: 13%;
+	height: 100vh;
+	background-color: #212525;
+	float: left;
+	position: sticky;
+	top: 0;
+	text-align: left;
+	line-height: 3.0rem;
 }
 
-#decada50 h1{
+.nav-lateral{
+	list-style-type: none;
+}
+
+.nav-link-lateral{
+	text-decoration: none;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 0.9rem;	
+}
+
+.nav-link-lateral, .nav-link-lateral:visited{
+	color: #fff;	
+}
+
+.nav-link-lateral:hover, .nav-link-lateral:active{
+	color: red;
+}
+
+.conteudo-pcs{	
+	background: #1C1C1C;
+	width: 77%;
+    height: 100%;
+    padding: 30px;
+	float: left;	
+}
+
+
+
+.conteudo-pcs h1{
 	color: #f0f0f0;	
 	font-size: 3.0rem;
 	font-weight: 700;
 	margin-top: 30px;
 }
 
-#decada50 p{
+.conteudo-pcs p{
 	color: #757575;
 	font-size: 1.5rem;
 	text-align: justify;
@@ -219,8 +258,51 @@ h5{
 	border: none;
 }
 
+aside{
+	background-color: #f0f0f0;
+	height: 100vh;
+    width: 10%;
+	float: left;
+	position: sticky;
+	top: 0;		    
+}
 
+aside h6{
+	color: #212525;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.3rem;
+	line-height: 2rem;
+}
 
+.aside-img{
+	width: 120px;
+}
+
+.aside-link{
+	color: #212525;
+	text-decoration: none;
+}
+
+.aside-link:hover{
+	color: red;
+	text-decoration: none;
+}
+
+#bt-topo{
+	width: 60px;
+	height: 60px;
+	background-color: black;
+	border-radius: 30px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+
+#bt-topo img{
+	width: 60px;
+	height: 60px;
+}
 
 
 @media screen and (max-width: 999px){
@@ -257,14 +339,30 @@ h5{
 	}
 
 	/*decada50*/
-	#decada50 h1{
+	.menu-lateral{
+		width: 13%;
+		height: 100vh;
+		background-color: #212525;
+		float: left;
+		position: sticky;
+		top: 0;
+		text-align: left;
+		line-height: 3.0rem;
+	}
+
+	.nav-link-lateral{
+		text-decoration: none;
+		font-family: 'Kaushan Script', cursive;
+		font-size: 0.9rem;	
+	}
+	.conteudo-pcs h1{
 		color: #f0f0f0;	
 		font-size: 2.5rem;
 		font-weight: 700;
 		margin-top: 30px;
 	}
 	
-	#decada50 p{
+	.conteudo-pcs p{
 		color: #757575;
 		font-size: 1.2rem;
 		text-align: justify;
@@ -296,7 +394,7 @@ h5{
 }
 
 /*mobile*/
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
 	h1{
 		color: #FFF;
 		text-align: center;
@@ -354,14 +452,33 @@ h5{
 	}
 
 	/*decada50*/
-	#decada50 h1{
+
+	.menu-lateral, .conteudo-pcs, aside{
+		width: 100%;
+		position: relative;	
+	}
+	
+	.menu-lateral{
+		height: 60px;
+	}
+
+	ul{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.nav-link-lateral{
+		font-size: 0.8rem;	
+	}
+
+	.conteudo-pcs h1{
 		color: #f0f0f0;	
 		font-size: 2rem;
 		font-weight: 700;
 		margin-top: 30px;
 	}
 	
-	#decada50 p{
+	.conteudo-pcs p{
 		color: #757575;
 		font-size: 1.3rem;
 		text-align: center;		
@@ -410,6 +527,31 @@ h5{
 		width: 100%;
 		height: 100%;
 		border: none;
+	}
+
+	aside{
+		height: 100px;
+		display: inline-flex;
+		flex-wrap: wrap;		
+	}
+
+	aside h6{
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	
+	.aside-img{
+		width: 75px;
+		height: 75px;		
+	}
+
+	.aside-link{
+		font-size: 0.6rem;
+	}
+
+	#nada{
+		background-color: #f0f0f0;
+		height: 1px;
 	}
 }
 

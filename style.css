@@ -10,27 +10,27 @@
 }
 
 main {
-	background: url("img/fundo.png") no-repeat center center;
-	background-size: cover;
+	background: url("img/fundo1.png") no-repeat center center;
+	background-size: cover;	
 	height: 88vh;
+		
 }
 
 article{	
-	margin: auto;	
-	padding: 80px;	
-	border-radius: 10px;	
-	width: 70%;
-	height: 80%;
-
+	padding: 25px;		
+	width: 70%;	
+	height: 100%;
+	
 }
 
 article p{
-	margin-top: 50px;
-	color: #FFF;
-	font-size: 1.2rem;	
-	font-family:'Poppins', sans-serif;
-	text-align: center;
+	
+	color: #212525;
+	font-size: 1rem;	
+	font-family:'Kaushan Script', serif;
+	text-align: left;
 	line-height: 2rem;
+	font-weight: 500;
 }
 
 footer {
@@ -314,7 +314,6 @@ aside h6 {
 	text-decoration: none;
 }
 
-/*tag criada devido ao position do menu lateral apresentar erros para ficar sticky*/
 .rodape-conteudo {
 	background-color: #1C1C1C;
 	position: relative;
@@ -338,6 +337,21 @@ aside h6 {
 
 
 @media screen and (max-width: 999px) {
+	/*HOME*/
+	article{	
+		padding: 5px;		
+		width: 70%;	
+		height: 30%;
+		
+	}
+	
+	article p{		
+		font-size: 0.9rem;	
+		font-family:'Kaushan Script', serif;
+		text-align: left;
+		line-height: 1.7rem;
+		font-weight: 400;
+	}
 
 	/*orçamento pc*/
 	.accordion-body {
@@ -457,6 +471,26 @@ aside h6 {
 
 /*mobile*/
 @media screen and (max-width: 600px) {
+	/*HOME*/
+	main{
+		background: url("img/fundo2.png") no-repeat center center;
+		background-size: cover;	
+		height: 88vh;
+	}
+
+	article{				
+		width: 100%;	
+		height: 50%;		
+	}
+	
+	article p{		
+		color: #212525;
+		font-size: 0.7rem;	
+		font-family:'Poppins', sans-serif;
+		text-align: center;
+		line-height: 1.2rem;
+		font-weight: 400;
+	}
 
 	/*orçamento pc*/
 	h1 {

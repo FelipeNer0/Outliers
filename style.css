@@ -182,7 +182,7 @@ h4 {
 .menu-lateral {
 	width: 13%;
 	height: 100vh;
-	background-color: #212525;
+	background-color: #363636;
 	float: left;
 	position: sticky;
 	top: 0;
@@ -723,7 +723,7 @@ aside h6 {
 	}
 	
 	.links-fontes {				
-		font-size: 0.38rem;
+		font-size: 0.37rem;
 		line-height: 1.5rem;		
 	}
 

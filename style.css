@@ -36,13 +36,14 @@ article p{
 footer {
 	background-color: #212529;	
 	padding: 20px;
-	height: 6vh;
+	height: 6vh;	
 	clear: left;
+	
 }
 
-#footer-p {
+#footer-p {	
 	text-align: center;
-	color: #FFF;
+	color: #FFF;	
 }
 
 footer a {
@@ -716,16 +717,14 @@ aside h6 {
 		font-size: 1.2rem;
 	}
 
-	#lista-fontes{
-		display: block;	
-		padding: 10px;
-		margin: 0;
-		text-align: left;			
+	#lista-fontes{		
+		padding: 5px;		
+		text-align: center;			
 	}
 	
-	.links-fontes {		
-		font-size: 0.35rem;
-		line-height: 1.5rem;
+	.links-fontes {				
+		font-size: 0.38rem;
+		line-height: 1.5rem;		
 	}
 
 }

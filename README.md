@@ -1,2 +1,2 @@
-# arquitetura_de_pcs
+# outliers
 Trabalho de TSI
